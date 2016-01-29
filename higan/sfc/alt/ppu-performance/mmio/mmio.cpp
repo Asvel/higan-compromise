@@ -25,7 +25,7 @@ auto PPU::vram_read(uint addr) -> uint8 {
 }
 
 auto PPU::vram_write(uint addr, uint8 data) -> void {
-  if(regs.display_disable || cpu.vcounter() >= display.height) {
+  if(1 || regs.display_disable || cpu.vcounter() >= display.height) {
     vram[addr] = data;
     cache.tilevalid[0][addr >> 4] = false;
     cache.tilevalid[1][addr >> 5] = false;

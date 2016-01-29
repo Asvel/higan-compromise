@@ -34,7 +34,7 @@ auto PPU::vram_read(uint addr) -> uint8 {
 }
 
 auto PPU::vram_write(uint addr, uint8 data) -> void {
-  if(regs.display_disable || vcounter() >= (!regs.overscan ? 225 : 240)) {
+  if(1 || regs.display_disable || vcounter() >= (!regs.overscan ? 225 : 240)) {
     vram[addr] = data;
     debugger.vram_write(addr, data);
   }

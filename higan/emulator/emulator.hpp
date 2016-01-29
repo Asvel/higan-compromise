@@ -12,11 +12,11 @@ namespace Emulator {
   static const string Website = "http://byuu.org/";
 
   #if defined(PROFILE_ACCURACY)
-  static const string Profile = "Accuracy";
+  static const string Profile = "Accuracy, allow invalid VRAM accessing";
   #elif defined(PROFILE_BALANCED)
-  static const string Profile = "Balanced";
+  static const string Profile = "Balanced, allow invalid VRAM accessing";
   #elif defined(PROFILE_PERFORMANCE)
-  static const string Profile = "Performance";
+  static const string Profile = "Performance, allow invalid VRAM accessing";
   #endif
 }
 
